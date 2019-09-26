@@ -24,7 +24,9 @@ public class Execute {
 
 
 	/**
-	 * Main execution part.
+	 * Main execution part. Chained calls attempt to launch ngrok to stream your current localhost
+	 * on remote address with various configurations. Process management, parsing, validations and
+	 * HTTP requests are all performed here.
 	 * 
 	 * @param args
 	 * @throws URISyntaxException
