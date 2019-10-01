@@ -20,6 +20,7 @@ public class Execute {
 
 	private static String port = "1234";
 	private static String apiRoot = "https://jsonstream.herokuapp.com";
+	private static String apiEndpoint = "/api/set/ngAutoStream";
 	private static Dialog dialog = new Dialog("options", "ngAuto", "Stream url copied to clipboard.");
 
 
@@ -65,7 +66,7 @@ public class Execute {
 			String finalUrl = match.group(0).substring(9).replaceAll("https", "http");
 			
 			String encoded = URLEncoder.encode(finalUrl, "UTF-8");
-			Generals.getHTML(apiRoot + "/api/set/testing/" + encoded);
+			Generals.getHTML(apiRoot + apiEndpoint + encoded);
 			
 			Generals.clipboard(finalUrl);
 			System.out.println("Streaming http://localhost:" + port + " on " + finalUrl + ".");
