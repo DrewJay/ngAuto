@@ -7,8 +7,8 @@ public class ProcessOps {
 	/**
 	 * Create process by executing exe file with parameters.
 	 * 
-	 * @param processLink - cmd process link
-	 * @param processParams - comma separated process parameters
+	 * @param processLink cmd process link
+	 * @param processParams comma separated process parameters
 	 * @return process object
 	 */
 	public static final Process startProcess(String processLink, String processParams) {
@@ -23,8 +23,8 @@ public class ProcessOps {
 	/**
 	 * Kill process by name.
 	 * 
-	 * @param name - name of process
-	 * @param extension - process extension
+	 * @param name name of process
+	 * @param extension process extension
 	 * @return success of operation
 	 */
 	public static final boolean killByName(String name, String extension) {
