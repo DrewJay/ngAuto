@@ -22,7 +22,7 @@ public class FileOps {
 	 * Get URI path of JAR file.
 	 * 
 	 * @param cls - calee class
-	 * @return - Jar URI
+	 * @return Jar URI
 	 * @throws URISyntaxException
 	 */
 	public static URI getJarURI(Class<?> cls) throws URISyntaxException {
