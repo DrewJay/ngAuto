@@ -15,14 +15,12 @@ import components.Dialog;
  * 
  * @author Andrej Noskaj.
  */
-
 public class Execute {
 
 	private static String port = "1234";
 	private static String apiRoot = "https://jsonstream.herokuapp.com";
 	private static String apiEndpoint = "/api/set/ngAutoStream";
 	private static Dialog dialog = new Dialog("options", "ngAuto", "Stream url copied to clipboard.");
-
 
 	/**
 	 * Main execution part. Chained calls attempt to launch ngrok to stream your current localhost
@@ -34,7 +32,6 @@ public class Execute {
 	 * @throws ZipException
 	 * @throws IOException
 	 */
-
 	public static void main(String[] args) throws URISyntaxException, ZipException, IOException {
 
 		port = (args.length == 0) ? port : args[0];

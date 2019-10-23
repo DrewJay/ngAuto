@@ -17,16 +17,14 @@ import java.util.zip.ZipException;
 import java.util.zip.ZipFile;
 
 public class FileOps {
-	
 
 	/**
 	 * Get URI path of JAR file.
 	 * 
-	 * @param Class cls
-	 * @return URI
+	 * @param {Class} cls - calee class
+	 * @return {URI} - Jar URI
 	 * @throws URISyntaxException
 	 */
-
 	public static URI getJarURI(Class<?> cls) throws URISyntaxException {
 
 		final ProtectionDomain domain;
@@ -42,17 +40,15 @@ public class FileOps {
 		return (uri);
 	}
 
-
 	/**
 	 * Get URI path of resource in JAR file.
 	 * 
-	 * @param where
-	 * @param fileName
-	 * @return URI
+	 * @param {URI} where - path where to search
+	 * @param {String} fileName - name of file
+	 * @return {URI} - Jar URI
 	 * @throws ZipException
 	 * @throws IOException
 	 */
-
 	public static URI getFile(final URI where, final String fileName) throws ZipException, IOException {
 
 		final File location;
@@ -77,16 +73,14 @@ public class FileOps {
 		return (fileURI);
 	}
 
-
 	/**
 	 * Create tempfile from exe packed in JAR.
 	 * 
-	 * @param zipFile
-	 * @param fileName
-	 * @return URI
+	 * @param {ZipFile} zipFile - zip file reference
+	 * @param {String} fileName - name of file
+	 * @return {URI} - Jar Uri
 	 * @throws IOException
 	 */
-
 	private static URI extract(final ZipFile zipFile, final String fileName) throws IOException {
 
 		final File tempFile;
@@ -124,13 +118,12 @@ public class FileOps {
 		return (tempFile.toURI());
 	}
 
-
 	/**
 	 * Close stream.
 	 * 
-	 * @param stream
+	 * @param {Closeable} stream - close reading stream
+	 * @return {void}
 	 */
-
 	private static void close(final Closeable stream) {
 
 		if (stream != null) {

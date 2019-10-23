@@ -11,41 +11,39 @@ public class Dialog {
 	private int action;
 	private String commit;
 
-	
 	/**
 	 * Construct the dialog object.
 	 * 
-	 * @param type
-	 * @param title
-	 * @param subtitle
+	 * @param {String} type - type of dialog
+	 * @param {String} title - display title of dialog
+	 * @param {String} subtitle - display subtitle of dialog
+	 * @return {void}
 	 */
-
 	public Dialog(String type, String title, String subtitle) {
 		
 		this.type = type;
 		this.title = title;
 		this.subtitle = subtitle;
 	}
-	
 
 	/**
 	 * Set action after dialog click.
 	 * 
-	 * @param action
-	 * @param commit
+	 * @param {int} action - enum reference
+	 * @param {String} commit - url to open in browser
+	 * @return {void}
 	 */
-
 	public void setAction(int action, String commit) {
 
 		this.action = action;
 		this.commit = commit;
 	}
 
-	
 	/**
 	 * Show dialog and commit action.
+	 * 
+	 * @return {void}
 	 */
-	
 	public void show() {
 		
 		if(this.type == "options") {
