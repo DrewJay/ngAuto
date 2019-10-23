@@ -14,10 +14,10 @@ public class Dialog {
 	/**
 	 * Construct the dialog object.
 	 * 
-	 * @param {String} type - type of dialog
-	 * @param {String} title - display title of dialog
-	 * @param {String} subtitle - display subtitle of dialog
-	 * @return {void}
+	 * @param type - type of dialog
+	 * @param title - display title of dialog
+	 * @param subtitle - display subtitle of dialog
+	 * @return void
 	 */
 	public Dialog(String type, String title, String subtitle) {
 		
@@ -29,9 +29,9 @@ public class Dialog {
 	/**
 	 * Set action after dialog click.
 	 * 
-	 * @param {int} action - enum reference
-	 * @param {String} commit - url to open in browser
-	 * @return {void}
+	 * @param action - enum reference
+	 * @param commit - url to open in browser
+	 * @return void
 	 */
 	public void setAction(int action, String commit) {
 
@@ -42,7 +42,7 @@ public class Dialog {
 	/**
 	 * Show dialog and commit action.
 	 * 
-	 * @return {void}
+	 * @return void
 	 */
 	public void show() {
 		

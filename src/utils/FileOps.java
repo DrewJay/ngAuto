@@ -21,8 +21,8 @@ public class FileOps {
 	/**
 	 * Get URI path of JAR file.
 	 * 
-	 * @param {Class} cls - calee class
-	 * @return {URI} - Jar URI
+	 * @param cls - calee class
+	 * @return - Jar URI
 	 * @throws URISyntaxException
 	 */
 	public static URI getJarURI(Class<?> cls) throws URISyntaxException {
@@ -43,9 +43,9 @@ public class FileOps {
 	/**
 	 * Get URI path of resource in JAR file.
 	 * 
-	 * @param {URI} where - path where to search
-	 * @param {String} fileName - name of file
-	 * @return {URI} - Jar URI
+	 * @param where - path where to search
+	 * @param fileName - name of file
+	 * @return Jar URI
 	 * @throws ZipException
 	 * @throws IOException
 	 */
@@ -76,9 +76,9 @@ public class FileOps {
 	/**
 	 * Create tempfile from exe packed in JAR.
 	 * 
-	 * @param {ZipFile} zipFile - zip file reference
-	 * @param {String} fileName - name of file
-	 * @return {URI} - Jar Uri
+	 * @param zipFile - zip file reference
+	 * @param fileName - name of file
+	 * @return Jar Uri
 	 * @throws IOException
 	 */
 	private static URI extract(final ZipFile zipFile, final String fileName) throws IOException {
@@ -121,8 +121,8 @@ public class FileOps {
 	/**
 	 * Close stream.
 	 * 
-	 * @param {Closeable} stream - close reading stream
-	 * @return {void}
+	 * @param stream - close reading stream
+	 * @return void
 	 */
 	private static void close(final Closeable stream) {
 
