@@ -59,7 +59,6 @@ public class Execute {
 		crawlData = Generals.getHTML("http://localhost:4040/inspect/http");
 
 		try {
-
 			// Sniff generated urls from local information page
 			Pattern pattern = Pattern.compile("\"URL.*?io");
 			Matcher match = pattern.matcher(crawlData);
