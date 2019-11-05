@@ -36,7 +36,7 @@ public class Execute {
 
 		port = (args.length == 0) ? port : args[0];
 
-		// Validate process and make sure no other is running
+		// Validate process and make sure no other is running.
 		ProcessOps.killByName("ngrok", "exe");
 		Generals.sleep(1);
 		String crawlData = Generals.getHTML("http://localhost:4040/inspect/http");
@@ -46,7 +46,7 @@ public class Execute {
 			return;
 		}
 
-		// Get access to ngrok.exe and forge process
+		// Get access to ngrok.exe and forge process.
 		final URI uri = FileOps.getJarURI(Execute.class);
 		final URI exe = FileOps.getFile(uri, "ngrok.exe");
 
@@ -55,22 +55,22 @@ public class Execute {
 
 		Generals.sleep(5);
 
-		// This is where parsing phase begins
+		// This is where parsing phase begins.
 		crawlData = Generals.getHTML("http://localhost:4040/inspect/http");
 
 		try {
-			// Sniff generated urls from local information page
+			// Sniff generated urls from local information page.
 			Pattern pattern = Pattern.compile("\"URL.*?io");
 			Matcher match = pattern.matcher(crawlData);
 			match.find();
 
 			String finalUrl = match.group(0).substring(9).replaceAll("https", "http");
 			
-			// Stream results to public API
+			// Stream results to public API.
 			String encoded = URLEncoder.encode(finalUrl, "UTF-8");
 			Generals.getHTML(apiRoot + apiEndpoint + encoded);
 			
-			// Copy url to clipboard and aknowledge success
+			// Copy url to clipboard and aknowledge success.
 			Generals.clipboard(finalUrl);
 			System.out.println("Streaming http://localhost:" + port + " on " + finalUrl + ".");
 			
