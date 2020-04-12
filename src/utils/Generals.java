@@ -74,7 +74,7 @@ public class Generals {
 	 */
 	public static final boolean browserify(String browser, String url) {
 		try {
-			if(Desktop.isDesktopSupported()) {
+			if (Desktop.isDesktopSupported()) {
 				Desktop.getDesktop().browse(new URI(url));
 			} else {
 				Runtime runtime = Runtime.getRuntime();
@@ -83,7 +83,7 @@ public class Generals {
 
 			return true;
 
-		} catch(IOException|URISyntaxException excp) {
+		} catch (IOException|URISyntaxException excp) {
 			return false;
 		}
 	}

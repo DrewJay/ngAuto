@@ -29,7 +29,7 @@ public class ProcessOps {
 		try {
 			Runtime.getRuntime().exec("taskkill /F /IM "+ name + "." + extension);
 			return true;
-		} catch(IOException exeption) {
+		} catch (IOException exeption) {
 			return false;
 		}
 	}

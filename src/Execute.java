@@ -76,7 +76,7 @@ public class Execute {
 			dialog.setAction(0, finalUrl);
 			dialog.show();
 			
-		} catch (Exception ex) {
+		} catch (Exception ParsingException) {
 			System.out.println("Sorry, parsing went wrong...");
 		}
 	}

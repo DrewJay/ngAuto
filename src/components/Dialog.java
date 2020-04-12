@@ -38,10 +38,10 @@ public class Dialog {
 	 * Show dialog and commit action.
 	 */
 	public void show() {
-		if(this.type == "options") {
+		if (this.type == "options") {
 			int response = JOptionPane.showOptionDialog(null, this.subtitle, this.title, JOptionPane.OK_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE, null, null, null);
 
-			if(response == JOptionPane.OK_OPTION && this.action == 0) {
+			if (response == JOptionPane.OK_OPTION && this.action == 0) {
 				Generals.browserify("chrome", commit);
 			}
 		}
