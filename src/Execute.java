@@ -16,9 +16,9 @@ import components.Dialog;
  * @author Andrej Noskaj.
  */
 public class Execute {
-
 	private static String port = "1234";
 	private static String apiRoot = "https://jsonstream.herokuapp.com";
+	private static String inspectUrl = "http://localhost:4040/inspect/http";
 	private static String apiEndpoint = "/api/set/ngAutoStream";
 	private static Dialog dialog = new Dialog("options", "ngAuto", "Stream url copied to clipboard.");
 
@@ -33,13 +33,12 @@ public class Execute {
 	 * @throws IOException If stream error occurs
 	 */
 	public static void main(String[] args) throws URISyntaxException, ZipException, IOException {
-
 		port = (args.length == 0) ? port : args[0];
 
 		// Validate process and make sure no other is running.
 		ProcessOps.killByName("ngrok", "exe");
 		Generals.sleep(1);
-		String crawlData = Generals.getHTML("http://localhost:4040/inspect/http");
+		String crawlData = Generals.getHTML(inspectUrl);
 
 		if (crawlData != null) {
 			System.out.println("ngAuto is already running.");
@@ -56,7 +55,7 @@ public class Execute {
 		Generals.sleep(5);
 
 		// This is where parsing phase begins.
-		crawlData = Generals.getHTML("http://localhost:4040/inspect/http");
+		crawlData = Generals.getHTML(inspectUrl);
 
 		try {
 			// Sniff generated urls from local information page.

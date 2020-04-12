@@ -13,7 +13,6 @@ import java.net.URL;
 import java.io.IOException;
 
 public class Generals {
-
 	/**
 	 * Ngrok creates status page on localhost:4040. I need to parse it in order
 	 * to sniff the URL where our page is published.
@@ -22,7 +21,6 @@ public class Generals {
 	 * @return Stringified HTML
 	 */
 	public static final String getHTML(String targetUrl) {
-
 		try {
 			StringBuilder result = new StringBuilder();
 			URL url = new URL(targetUrl);
@@ -50,7 +48,6 @@ public class Generals {
 	 * @param data Data to save
 	 */
 	public static final void clipboard(String data) {
-
 		StringSelection stringSelection = new StringSelection(data);
 		Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
 		clipboard.setContents(stringSelection, null);
@@ -62,7 +59,6 @@ public class Generals {
 	 * @param seconds Sleep length in seconds
 	 */
 	public static final void sleep(int seconds) {
-
 		try {
 			Thread.sleep(seconds * 1000);
 		} catch (InterruptedException iex) {
@@ -77,7 +73,6 @@ public class Generals {
 	 * @param url URL to open
 	 */
 	public static final boolean browserify(String browser, String url) {
-
 		try {
 			if(Desktop.isDesktopSupported()) {
 				Desktop.getDesktop().browse(new URI(url));

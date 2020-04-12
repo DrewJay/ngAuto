@@ -17,7 +17,6 @@ import java.util.zip.ZipException;
 import java.util.zip.ZipFile;
 
 public class FileOps {
-
 	/**
 	 * Get URI path of JAR file.
 	 * 
@@ -26,7 +25,6 @@ public class FileOps {
 	 * @throws URISyntaxException If URI can not be parsed
 	 */
 	public static URI getJarURI(Class<?> cls) throws URISyntaxException {
-
 		final ProtectionDomain domain;
 		final CodeSource source;
 		final URL url;
@@ -50,7 +48,6 @@ public class FileOps {
 	 * @throws IOException If stream error occurs
 	 */
 	public static URI getFile(final URI where, final String fileName) throws ZipException, IOException {
-
 		final File location;
 		final URI fileURI;
 
@@ -82,7 +79,6 @@ public class FileOps {
 	 * @throws IOException If stream error occurs
 	 */
 	private static URI extract(final ZipFile zipFile, final String fileName) throws IOException {
-
 		final File tempFile;
 		final ZipEntry entry;
 		final InputStream zipStream;
@@ -93,7 +89,7 @@ public class FileOps {
 		entry = zipFile.getEntry(fileName);
 
 		if (entry == null) {
-			throw new FileNotFoundException("cannot find file: " + fileName + " in archive: " + zipFile.getName());
+			throw new FileNotFoundException("Cannot find file: " + fileName + " in archive: " + zipFile.getName());
 		}
 
 		zipStream = zipFile.getInputStream(entry);
@@ -124,7 +120,6 @@ public class FileOps {
 	 * @param stream Close reading stream
 	 */
 	private static void close(final Closeable stream) {
-
 		if (stream != null) {
 			try {
 				stream.close();

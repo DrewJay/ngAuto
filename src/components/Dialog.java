@@ -4,7 +4,6 @@ import utils.Generals;
 import javax.swing.JOptionPane;
 
 public class Dialog {
-	
 	private String type;
 	private String title;
 	private String subtitle;
@@ -19,7 +18,6 @@ public class Dialog {
 	 * @param subtitle Display subtitle of dialog
 	 */
 	public Dialog(String type, String title, String subtitle) {
-		
 		this.type = type;
 		this.title = title;
 		this.subtitle = subtitle;
@@ -40,7 +38,6 @@ public class Dialog {
 	 * Show dialog and commit action.
 	 */
 	public void show() {
-		
 		if(this.type == "options") {
 			int response = JOptionPane.showOptionDialog(null, this.subtitle, this.title, JOptionPane.OK_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE, null, null, null);
 
