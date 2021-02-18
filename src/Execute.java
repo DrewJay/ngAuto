@@ -27,10 +27,10 @@ public class Execute {
 	 * on remote address with various configurations. Process management, parsing, validations and
 	 * HTTP requests are all performed here.
 	 * 
-	 * @param args Program arguments
-	 * @throws URISyntaxException If URI parsing went wrong
-	 * @throws ZipException If operations over Zip went wrong
-	 * @throws IOException If stream error occurs
+	 * @param args Program arguments.
+	 * @throws URISyntaxException If URI parsing went wrong.
+	 * @throws ZipException If operations over Zip went wrong.
+	 * @throws IOException If stream error occurs.
 	 */
 	public static void main(String[] args) throws URISyntaxException, ZipException, IOException {
 		port = (args.length == 0) ? port : args[0];
