@@ -20,9 +20,9 @@ public class FileOps {
 	/**
 	 * Get URI path of JAR file.
 	 * 
-	 * @param cls Calee class
-	 * @return Jar URI
-	 * @throws URISyntaxException If URI can not be parsed
+	 * @param cls Calee class.
+	 * @return Jar URI.
+	 * @throws URISyntaxException If URI can not be parsed.
 	 */
 	public static URI getJarURI(Class<?> cls) throws URISyntaxException {
 		final ProtectionDomain domain;
@@ -41,11 +41,11 @@ public class FileOps {
 	/**
 	 * Get URI path of resource in JAR file.
 	 * 
-	 * @param where Path where to search
-	 * @param fileName Name of file
-	 * @return Jar URI
-	 * @throws ZipException If Zip creation went wrong
-	 * @throws IOException If stream error occurs
+	 * @param where Path where to search.
+	 * @param fileName Name of file.
+	 * @return Jar URI.
+	 * @throws ZipException If Zip creation went wrong.
+	 * @throws IOException If stream error occurs.
 	 */
 	public static URI getFile(final URI where, final String fileName) throws ZipException, IOException {
 		final File location;
@@ -73,10 +73,10 @@ public class FileOps {
 	/**
 	 * Create tempfile from exe packed in JAR.
 	 * 
-	 * @param zipFile Zip file reference
-	 * @param fileName Name of file
-	 * @return Jar URI
-	 * @throws IOException If stream error occurs
+	 * @param zipFile Zip file reference.
+	 * @param fileName Name of file.
+	 * @return Jar URI.
+	 * @throws IOException If stream error occurs.
 	 */
 	private static URI extract(final ZipFile zipFile, final String fileName) throws IOException {
 		final File tempFile;
@@ -117,7 +117,7 @@ public class FileOps {
 	/**
 	 * Close stream.
 	 * 
-	 * @param stream Close reading stream
+	 * @param stream Close reading stream.
 	 */
 	private static void close(final Closeable stream) {
 		if (stream != null) {
