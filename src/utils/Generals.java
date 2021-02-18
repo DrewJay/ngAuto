@@ -17,8 +17,8 @@ public class Generals {
 	 * Ngrok creates status page on localhost:4040. I need to parse it in order
 	 * to sniff the URL where our page is published.
 	 * 
-	 * @param targetUrl Target url we are parsing
-	 * @return Stringified HTML
+	 * @param targetUrl Target url we are parsing.
+	 * @return Stringified HTML.
 	 */
 	public static final String getHTML(String targetUrl) {
 		try {
@@ -45,7 +45,7 @@ public class Generals {
 	/**
 	 * Copy string to cliboard.
 	 * 
-	 * @param data Data to save
+	 * @param data Data to save.
 	 */
 	public static final void clipboard(String data) {
 		StringSelection stringSelection = new StringSelection(data);
@@ -56,7 +56,7 @@ public class Generals {
 	/**
 	 * Pause main thread for a few seconds.
 	 * 
-	 * @param seconds Sleep length in seconds
+	 * @param seconds Sleep length in seconds.
 	 */
 	public static final void sleep(int seconds) {
 		try {
@@ -69,8 +69,8 @@ public class Generals {
 	/**
 	 * Open url in browser.
 	 * 
-	 * @param browser Browser code name
-	 * @param url URL to open
+	 * @param browser Browser code name.
+	 * @param url URL to open.
 	 */
 	public static final boolean browserify(String browser, String url) {
 		try {
